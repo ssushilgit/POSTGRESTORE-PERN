@@ -60,6 +60,7 @@ app.use(async (req, res, next) =>{
 
 app.use("/api/products", productRoutes);
 
+
 async function initDB() {
   try {
     await sql`
