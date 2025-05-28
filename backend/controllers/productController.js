@@ -114,7 +114,7 @@ export const deleteProduct = async (req, res) => {
     const {id} = req.params;
     try {
         const deletedProduct = await sql`
-            DELTE FROM products WHERE id=${id}
+            DELETE FROM products WHERE id=${id}
             RETURNING *
         `
         if(deletedProduct === 0){
